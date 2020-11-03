@@ -50,10 +50,16 @@ public class Test {
                 inVt=inStack.get(inStack.size()-2).charAt(0);
                 if(Check.judge(inVt)){
                     int res=Check.Compare(inVt,outVt);
-                    if(res==0||res==1){
+                    if(res==0){
                         inStack.add(String.valueOf(outVt));
                         System.out.println("I"+outVt);
                         continue;
+                    }
+                    else if(res==1){
+                        while(inStack.get(inStack.size()-1)!="("){
+                            inStack.remove(inStack.size()-1);
+                        }
+                        inStack.remove(inStack.size()-1);
                     }
                     else if(res==2){
                         if(Reduce()==0) {
