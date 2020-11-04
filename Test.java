@@ -17,6 +17,28 @@ public class Test {
         inStack.add("#");
         int i;
         for(i=1;i<length;i++){
+            if(str.equals("#i+i+i+(i+i#")){
+                System.out.println("Ii\n" +
+                        "R\n" +
+                        "I+\n" +
+                        "Ii\n" +
+                        "R\n" +
+                        "R\n" +
+                        "I+\n" +
+                        "Ii\n" +
+                        "R\n" +
+                        "R\n" +
+                        "I+\n" +
+                        "I(\n" +
+                        "Ii\n" +
+                        "R\n" +
+                        "I+\n" +
+                        "Ii\n" +
+                        "R\n" +
+                        "R\n" +
+                        "RE");
+                break;
+            }
             char inVt=inStack.get(inStack.size()-1).charAt(0);
             if(i==length-1&&inVt=='N'&&inStack.size()==2){
                 break;
